@@ -11,3 +11,7 @@ needs special flags to be started:
 ```
 docker run --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro -it --security-opt=seccomp:unconfined --tmpfs /run --tmpfs /run/lock dalehamel/ubuntu-docker-systemd-minimal
 ```
+
+Useful docs:
+
+* https://rhatdan.wordpress.com/2014/04/30/running-systemd-within-a-docker-container/
