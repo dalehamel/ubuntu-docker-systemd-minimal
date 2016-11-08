@@ -18,8 +18,7 @@ RUN apt-get install -y \
   ca-certificates \
   curl \
   dmidecode \
-  ubuntu-standard \
-  ssh # TEMPORARY
+  ubuntu-standard
 
 RUN systemctl set-default multi-user.target
 
@@ -34,7 +33,5 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 
 RUN locale-gen en_US.UTF-8
-
-RUN systemctl enable ssh.service
 
 CMD ["/sbin/init"]
